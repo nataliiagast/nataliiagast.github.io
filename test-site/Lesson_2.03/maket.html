@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maket</title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <style>
+        /* <i class="las la-layer-group"></i> */
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Dancing+Script:wght@600&family=EB+Garamond:wght@700&family=Golos+Text&family=Inter:wght@200&family=Lobster&family=Philosopher&family=Playfair+Display+SC&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+        :root {
+            --color-grey: #eee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            gap: 40px;
+        }
+
+        .row__small-item {
+            flex: 1
+        }
+
+        .icon {
+            background: var(--color-grey);
+        }
+
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        main {
+            width: 650px;
+            margin: 10px 10px 0 10px;
+        }
+
+        .mittle {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .row__item {
+            padding: 20px;
+            background: var(--color-grey);
+            text-align: justify;
+            border-radius: 15px;
+            background: var(--color-grey);
+        }
+
+        .first {
+            width: calc(100% / 2);
+            box-sizing: border-box;
+        }
+
+        .second {
+            width: calc(100% / 2);
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+        }
+
+        p {
+            font-size: 12px;
+            word-spacing: 5px;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            margin: 10px 0;
+        }
+
+        .imeg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imegs {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        .imeg1 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            line-height: 0;
+            z-index: 1;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+
+        .imeg2 {
+            position: absolute;
+            bottom: 0;
+            right: 20%;
+            line-height: 0;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="row">
+                <div class="row__small-item">
+                    <span class="icon">
+                        <i class="las la-cube"></i>
+                    </span>
+                    <h4>
+                        text....
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quasi.
+                    </p>
+                </div>
+
+                <div class="row__small-item">
+                    <span class="icon">
+                        <i class="las la-layer-group"></i>
+                    </span>
+                    <h4>
+                        text....
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores!
+                    </p>
+                </div>
+
+                <div class="row__small-item">
+                    <span class="icon">
+                        <i class="las la-cloud"></i>
+                    </span>
+                    <h4>
+                        text....
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, hic?
+                    </p>
+                </div>
+            </div>
+            <div class="row mittle">
+                <div class="row__item first">
+                    <h3 class="text">
+                        Subtitle
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit alias blanditiis
+                        temporibus in ipsa!
+                    </p>
+                    <figure class="imeg">
+                        <img class="imegs" src="https://via.placeholder.com/100x150" alt="">
+                    </figure>
+                </div>
+                <div class="row__item second">
+                    <h3 class="text">
+                        Subtitle 1
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit alias blanditiis
+                        temporibus in ipsa!
+                    </p>
+                    <figure class="imeg1">
+                        <img src="https://via.placeholder.com/120x174" alt="">
+                    </figure>
+                    <figure class="imeg2">
+                        <img src="https://via.placeholder.com/150x155" alt="">
+                    </figure>
+                </div>
+            </div>
+            <div class="row__item">
+                <h3>
+                    Subtitle 3
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam tempore culpa illo quidem
+                    perspiciatis sed?
+                </p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>
