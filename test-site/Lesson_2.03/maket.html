@@ -11,7 +11,7 @@
 
     <style>
         /* <i class="las la-layer-group"></i> */
-        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Dancing+Script:wght@600&family=EB+Garamond:wght@700&family=Golos+Text&family=Inter:wght@200&family=Lobster&family=Philosopher&family=Playfair+Display+SC&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,400;1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Dancing+Script:wght@600&family=EB+Garamond:wght@700&family=Golos+Text&family=Inter:wght@200&family=Lato:ital,wght@0,400;1,300&family=Lobster&family=Open+Sans:ital,wght@1,500&family=Philosopher&family=Playfair+Display+SC&family=Roboto+Condensed:wght@300&family=Roboto+Mono&family=Roboto:ital,wght@0,400;1,300&display=swap');
 
         :root {
             --color-grey: #eee;
@@ -23,28 +23,44 @@
         }
 
         body {
+            padding: 30px;
+            font-family: 'Roboto Mono', monospace;
             height: 100%;
-            font-family: 'Roboto Condensed', sans-serif;
             display: flex;
             justify-content: center;
         }
 
         .row {
             display: flex;
-            gap: 40px;
+            gap: 20px;
         }
 
         .row__small-item {
-            flex: 1
+            flex: 1;
+        }
+
+        .width1 {
+            padding: 10px 40px 0 0;
+        }
+
+        .width2 {
+            padding: 10px 20px 0;
+        }
+
+        .width3 {
+            padding: 10px 0 0 40px;
         }
 
         .icon {
             background: var(--color-grey);
+            margin-top: 5px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
         h4 {
             margin-top: 20px;
-            margin-bottom: 5px;
         }
 
         main {
@@ -53,7 +69,7 @@
         }
 
         .mittle {
-            margin-top: 50px;
+            margin-top: 40px;
             margin-bottom: 20px;
         }
 
@@ -62,7 +78,7 @@
             background: var(--color-grey);
             text-align: justify;
             border-radius: 15px;
-            background: var(--color-grey);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
         .first {
@@ -79,10 +95,11 @@
 
         p {
             font-size: 12px;
+            font-weight: 500;
             word-spacing: 5px;
             letter-spacing: 0.5px;
-            line-height: 1.2;
-            margin: 10px 0;
+            line-height: 1.5;
+            margin: 5px 0 10px 0;
         }
 
         .imeg {
@@ -92,7 +109,7 @@
         }
 
         .imegs {
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
 
         .imeg1 {
@@ -119,7 +136,7 @@
     <main>
         <section>
             <div class="row">
-                <div class="row__small-item">
+                <div class="row__small-item width1">
                     <span class="icon">
                         <i class="las la-cube"></i>
                     </span>
@@ -127,11 +144,11 @@
                         text....
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quasi.
+                        Lorem ipsum dolor sit amet consectetur.
                     </p>
                 </div>
 
-                <div class="row__small-item">
+                <div class="row__small-item width2">
                     <span class="icon">
                         <i class="las la-layer-group"></i>
                     </span>
@@ -139,11 +156,11 @@
                         text....
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores!
+                        Lorem ipsum dolor sit amet consectetur.
                     </p>
                 </div>
 
-                <div class="row__small-item">
+                <div class="row__small-item width3">
                     <span class="icon">
                         <i class="las la-cloud"></i>
                     </span>
@@ -151,30 +168,28 @@
                         text....
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, hic?
+                        Lorem ipsum dolor sit amet consectetur.
                     </p>
                 </div>
             </div>
             <div class="row mittle">
                 <div class="row__item first">
-                    <h3 class="text">
+                    <h3>
                         Subtitle
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit alias blanditiis
-                        temporibus in ipsa!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloribus.
                     </p>
                     <figure class="imeg">
                         <img class="imegs" src="https://via.placeholder.com/100x150" alt="">
                     </figure>
                 </div>
                 <div class="row__item second">
-                    <h3 class="text">
+                    <h3>
                         Subtitle 1
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium suscipit alias blanditiis
-                        temporibus in ipsa!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, nihil.
                     </p>
                     <figure class="imeg1">
                         <img src="https://via.placeholder.com/120x174" alt="">
@@ -192,7 +207,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam tempore culpa illo quidem
                     perspiciatis sed?
                 </p>
-                <p>Lorem ipsum dolor sit amet.</p>
+
             </div>
 
         </section>
