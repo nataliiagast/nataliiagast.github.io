@@ -28,6 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
 
         .container {
@@ -43,6 +44,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            min-width: 75%;
         }
 
         span {
@@ -121,6 +123,7 @@
             justify-content: center;
             padding-left: 30px;
             padding-right: 10px;
+            min-width: 25%;
         }
 
         form {
@@ -170,9 +173,12 @@
         }
 
         .google {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             margin: 5px 0;
-            padding: 10px 0;
+            padding: 5px 0;
             font-size: 11px;
             background: white;
             border-radius: 5px;
@@ -190,9 +196,9 @@
             background: rgba(230, 231, 229, 0.486);
         }
 
-        .la-google {
-            color: rgba(32, 17, 238, 0.993);
-            font-size: 15px;
+        .la-gofore {
+            color: rgba(0, 68, 255, 0.774);
+            font-size: 25px;
             font-weight: 1000;
         }
 
@@ -265,7 +271,7 @@
                     <button class="account">Create account</button>
                 </p>
                 <p>
-                    <button class="google"><i class="lab la-google"></i> Sing up with Google</button>
+                    <button class="google"><i class="lab la-gofore"></i> Sing up with Google</button>
                 </p>
                 <p class="login">Already have an account? <a href="Log in">Log in</a> </p>
             </form>
