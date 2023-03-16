@@ -22,7 +22,7 @@
 
 		.container {
 			display: grid;
-			grid-template-columns: 1fr 2fr 3fr 0.5fr;
+			grid-template-columns: 1fr 2fr 3fr 0.2fr;
 			grid-template-rows: 0.1fr 1fr;
 			grid-template-areas:
 				"aside article head nav"
@@ -91,7 +91,6 @@
 			grid-template-columns: auto;
 			grid-template-areas:
 				"span sum"
-
 			;
 			gap: 20px;
 		}
@@ -114,7 +113,6 @@
 		.little5,
 		.little6 {
 			font-size: 18px;
-			/* padding: 10px 0 10px 10px; */
 		}
 
 		.a1 {
@@ -399,7 +397,7 @@
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
-		
+
 			padding: 10px;
 		}
 
@@ -464,46 +462,100 @@
 			padding: 10px;
 			margin: 5px 0;
 		}
+
 		.failr {
 			border: 1px solid gray;
 			border-radius: 15px 15px 0 15px;
 			padding: 2px 15px 2px 80px;
 			background: white;
 			margin: 5px 0;
+			cursor: pointer;
 		}
+
 		.faill {
 			border: 1px solid gray;
 			border-radius: 15px 15px 15px 0;
 			padding: 2px 15px 2px 80px;
 			margin: 5px 0;
+			cursor: pointer;
 		}
+
 		.wort {
 			font-size: 10px;
 			color: gray;
 			padding: 5px 0;
 		}
+
 		.fail {
 			border: 1px solid gray;
 			border-radius: 15px 15px 15px 0;
 			padding: 5px;
+			cursor: pointer;
 		}
+
 		.textt {
 			padding: 10px 200px 10px 5px;
 			border: none;
 			border-radius: 10px;
 		}
+
 		.textt:focus {
 			outline: none;
 		}
+
 		.bom {
 			background: rgb(26, 26, 223);
-			
+
 		}
+
 		.bum {
 			color: white;
 		}
+
 		.nave:hover {
 			cursor: pointer;
+		}
+
+		.avatar {
+			background: url(https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&dl=houcine-ncib-B4TjXnI0Y2c-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.avatar1 {
+			background: url(https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&dl=imansyah-muhamad-putera-n4KewLKFOZw-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.avatar2 {
+			background: url(https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&dl=jurica-koletic-7YVZYZeITc8-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.avatar3 {
+			background: url(https://images.unsplash.com/photo-1616766098946-e4fabb7d6da0?ixlib=rb-4.0.3&dl=scott-butcher-frANbBmqWJg-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.avatar4 {
+			background: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&dl=albert-dera-ILip77SbmOE-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.avatar5 {
+			background: url(https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-4.0.3&dl=ludvig-wiese-d-MfHM-jHwc-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
+		}
+
+		.avatar6 {
+			background: url(https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-4.0.3&dl=hassan-khan-EGVccebWodM-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb);
+			background-size: cover;
+			background-position: center;
 		}
 	</style>
 </head>
@@ -588,7 +640,7 @@
 				</div>
 				<div class="item">
 					<div class="bloks grey">
-						<div class="name">
+						<div class="name avatar1">
 							<div class="images greens"></div>
 						</div>
 						<div class="text">
@@ -603,7 +655,7 @@
 						<div class="number">2</div>
 					</div>
 					<div class="bloks grey">
-						<div class="name">
+						<div class="name avatar">
 							<div class="images greens"></div>
 						</div>
 						<div class="text">
@@ -618,7 +670,7 @@
 						<div class="number">3</div>
 					</div>
 					<div class="bloks border">
-						<div class="name">
+						<div class="name avatar2">
 							<div class="images"></div>
 						</div>
 						<div class="text">
@@ -630,10 +682,9 @@
 								Hi<i class="lar la-hand-paper"></i>I checed layout agai...
 							</p>
 						</div>
-						<!-- <div class="number"></div> -->
 					</div>
 					<div class="bloks border">
-						<div class="name">
+						<div class="name avatar3">
 							<div class="images"></div>
 						</div>
 						<div class="text">
@@ -645,10 +696,9 @@
 								okay!
 							</p>
 						</div>
-						<!-- <div class="number"></div> -->
 					</div>
 					<div class="bloks border">
-						<div class="name">
+						<div class="name avatar4">
 							<div class="images greens"></div>
 						</div>
 						<div class="text">
@@ -660,10 +710,9 @@
 								I don't think we're going to finish....
 							</p>
 						</div>
-						<!-- <div class="number"></div> -->
 					</div>
 					<div class="bloks border">
-						<div class="name">
+						<div class="name avatar5">
 							<div class="images"></div>
 						</div>
 						<div class="text">
@@ -675,10 +724,9 @@
 								Sorry, Friend. I won't do it again!
 							</p>
 						</div>
-						<!-- <div class="number"></div> -->
 					</div>
 					<div class="bloks border">
-						<div class="name">
+						<div class="name avatar6">
 							<div class="images"></div>
 						</div>
 						<div class="text">
@@ -690,14 +738,13 @@
 								Sent you the file
 							</p>
 						</div>
-						<!-- <div class="number"></div> -->
 					</div>
 				</div>
 			</div>
 		</article>
 		<header>
 			<div class="heads">
-				<div class="name">
+				<div class="name avatar1">
 					<div class="images greens"></div>
 				</div>
 				<div class="left">
@@ -741,16 +788,16 @@
 						<p class="doc">Brief.doc 148 KB</p>
 					</div>
 				</div>
-					<div class="futter">
-						<p>
-							<input class="textt" type="text" placeholder="Write a message....">
-						</p>
-						<p>
-							<button class="nave"><i class="lar la-image ic"></i></button>
-							<button class="nave"><i class="las la-microphone ic"></i></button>
-							<button class="nave bom"><i class="lab la-telegram ic bum"></i></button>
-						</p>
-					</div>
+				<div class="futter">
+					<p>
+						<input class="textt" type="text" placeholder="Write a message....">
+					</p>
+					<p>
+						<button class="nave"><i class="lar la-image ic"></i></button>
+						<button class="nave"><i class="las la-microphone ic"></i></button>
+						<button class="nave bom"><i class="lab la-telegram ic bum"></i></button>
+					</p>
+				</div>
 			</div>
 		</main>
 
