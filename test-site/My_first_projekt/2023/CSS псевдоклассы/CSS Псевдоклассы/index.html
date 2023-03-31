@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Псевдоклассы</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		body {
+			padding: 30px;
+		}
+
+		.text {
+			font-size: 24px;
+			line-height: 33px;
+			margin: 0 0 30px 0;
+		}
+		.text:first-line {
+			color: green;
+		}
+		.text:first-letter {
+			color: red;
+			font-size: 50px;
+		}
+
+		
+
+		.list li {
+			font-size: 24px;
+			margin: 0 0 20px 0;
+		}
+		.list li::before {
+			content: '' ;
+			width: 10px;
+			height: 10px;
+			border-radius: 50px;
+			background-color: red;
+			display: inline-block;
+			margin-right: 10px;
+
+		}
+		.list li::after {
+			content: '' ;
+
+		}
+		.list li:hover::before {
+			background-color: yellow;
+
+		}
+		
+	</style>
+</head>
+
+<body>
+
+	<p class="text">
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit adipisci tempora, ipsa laboriosam quasi
+		nisi voluptate nihil mollitia cupiditate. Atque dignissimos cum et ab. Reiciendis.
+	</p>
+	<ul class="list">
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+		<li>text</li>
+	</ul>
+</body>
+
+</html>

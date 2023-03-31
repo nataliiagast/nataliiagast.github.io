@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Знакомство с тегами. Чфыть 3 (Формы)</title>
+</head>
+
+<body>
+	<form action="#" method="post" enctype="multipart/form-data"></form>
+	<div>
+		<!-- disabled - Блокирует работу с каким либо полем-->
+		<input disabled placeholder="Подпись поля" type="text" name="username" value="">
+	</div>
+	<div>
+		<input tabindex="1" type="password" name="userpass" value="">
+	</div>
+	<!-- Позволяет выбрать один какой то вариант*/ -->
+	<div>
+		<p> <!-- "checked"  Задаём значение по умолчанию. -->
+			<input checked type="radio" name="beer" value="lager"> Светлое пиво
+		</p> /* Позволяет выбрать один какойто вариант*/
+		<p>
+			<input tabindex="2" type="radio" name="beer" value="lager"> Тёмное пиво
+		</p>
+	</div>
+	<br>
+	<div>
+		<p>
+			<!-- tabindex - Определяет порядок перехода между элементами при нажатии клавиши TAB 
+			Для группы элементов - type="radio индекс должен быть одинаковымю -->
+			<input tabindex="2" type="radio" name="beer2" value="lager"> Светлое пиво
+		</p>
+		<p>
+			<input tabindex="2" checked type="radio" name="beer2" value="lager"> Тёмное пиво
+		</p>
+	</div>
+	<div>
+		<p>
+			<input type="checkbox" name="car" value="yes"> Наличие авто
+		</p>
+		<p>
+			<input checked type="checkbox" name="car2" value="yes"> Наличие авто2
+		</p>
+		<p>
+			<input type="checkbox" name="car3" value="yes"> Наличие авто3
+		</p>
+		<p>
+			<input checked type="checkbox" name="car4" value="yes"> Наличие авто4
+		</p>
+	</div>
+	<div>
+		<p>
+			<!-- Передача файла обязательно передаётся с дополнительными настройками method="post" enctype="multipart/form-data" -->
+			<input type="file" name="foto" value="">
+		</p>
+	</div>
+	<div>
+		<!-- Поле для ввода текста  cols="30" rows="10" - размер поля -->
+		<!-- <textarea name="text" cols="30" rows="10"></textarea> -->
+		<textarea name="text"></textarea>
+	</div>
+	<div>
+		<!-- коробочка выпадающего списка -->
+		<select name="color">
+		<!-- <select multiple name="color"> multiple - множественный выбор-->
+			<!-- пункты выпадающего списка -->
+			<option value="red">красный</option>
+			<!-- selected - выбор по умолчанию -->
+			<option selected value="green">зелёный</option>
+			<option value="blue">синий</option>
+		</select>
+	</div>
+	<div>
+		<!-- В этом случае отправится вся форма все поля котрые были заполнены. -->
+		<button type="submit">Отправить</button>
+		<!-- reset  Очищает всю форму все поля-->
+		<button type="reset">Отправить</button> 
+		
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+		}
+
+		html,
+		body,
+		.container {
+			height: 100%;
+
+		}
+
+		.head {
+			grid-area: head;
+			background: rgb(115, 197, 90);
+		}
+
+		.aside {
+			grid-area: aside;
+			background: rgb(115, 197, 90);
+		}
+
+		.main {
+			grid-area: main;
+			background: rgb(115, 197, 90);
+		}
+
+		.nav {
+			grid-area: nav;
+			background: rgb(115, 197, 90);
+		}
+
+		.futter {
+			grid-area: futter;
+			background: rgb(115, 197, 90);
+		}
+
+
+
+
+		.container {
+			display: grid;
+			grid-template-columns: 150px 2fr 100px;
+			grid-template-rows: 150px 2fr 150px;
+			grid-template-areas:
+				"head head head"
+				"aside main nav"
+				"aside futter futter";
+			gap: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<header class="head"></header>
+		<aside class="aside"></aside>
+		<main class="main"></main>
+		<nav class="nav"></nav>
+		<div class="futter"></div>
+
+	</div>
+</body>
+
+</html>

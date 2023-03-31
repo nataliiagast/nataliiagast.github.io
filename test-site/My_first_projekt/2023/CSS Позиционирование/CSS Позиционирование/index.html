@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Позиционирование</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		body {
+			padding: 30px;
+
+		}
+
+		.block {
+			border: 5px solid red;
+			max-width: 800px;
+			height: 800px;
+			margin: 0 auto;
+			/*Заставляет элемент выстроится по центру. */
+			position: relative;
+
+		}
+
+		.block div {
+			line-height: 50px;
+			font-size: 18px;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		.block__1 {
+			background-color: #ece89d;
+
+
+		}
+
+		.block__2 {
+			background-color: #5e5373;
+			color: white;
+			position: relative;
+			/* Положение элемента устанавливается относительно его изначального положения в коде. */
+			left: 50px;
+			top: 60px;
+			z-index: 2;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+		}
+
+		.block__3 {
+			z-index: 3;
+			background-color: #18b5a4;
+
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="block">
+		<div class="block__1">
+			.block__1
+		</div>
+		<div class="block__2">
+			.block__2
+		</div>
+		<div class="block__3">
+			.block__3
+		</div>
+	</div>
+</body>
+
+</html>

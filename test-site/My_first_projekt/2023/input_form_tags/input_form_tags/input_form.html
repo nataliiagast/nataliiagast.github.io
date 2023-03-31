@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Поля ввода</title>
+</head>
+<body>
+	<form action="#" method="get">
+		<div>
+			<p>
+				Name
+			</p>
+			<input placeholder="Enter your name." tabindex="1" name="username" type="text">
+		</div>
+		<div>
+			<p>
+				Password
+			</p>
+			<input tabindex="2" name="userpass" type="password">
+		</div>
+		<div>
+			<p>
+				Telefon
+			</p>
+			<input tabindex="3" name="userphone" type="tel">
+		</div>
+		<div>
+			<p>
+				Gender
+			</p>
+			<div>
+				<input checked tabindex="4" type="radio" name="gender" value="male">M
+			</div>
+			<div>
+				<input tabindex="4" type="radio" name="gender" value="female">F
+			</div>
+		</div>
+		<div>
+			<p>
+				Имущество
+			</p>
+			<div>
+				<input checked tabindex="5" type="checkbox" name="bike" value="yes">Bike
+			</div>
+			<div>
+				<input tabindex="6" type="checkbox" name="car" value="yes">Car
+			</div>
+			<div>
+				<input disabled tabindex="7" type="checkbox" name="house" value="yes">House
+			</div>
+		</div>
+		<div>
+			<p>
+				Дополнительная информация
+			</p>
+			<textarea tabindex="8" name="text"></textarea>	
+		</div>
+		<div>
+			<p>
+				Прикрепить фото
+			</p>
+			<input tabindex="9" type="file">
+		</div>
+		<div>
+			<p>
+				Любимый цвет
+			</p>
+			<select tabindex="10" name="color">
+				<option value="red">red</option>
+				<option value="yellow">yellow</option>
+				<option value="green">green</option>
+				<option selected value="blue">blue</option>
+			</select>
+		</div>
+		<div>
+			<p>
+				Действия
+			</p>
+			<button tabindex="11" type="submit">Отправить</button>
+			<button tabindex="12" type="reset">Очистить</button>
+		</div>
+
+	</form>
+
+</body>
+</html>
