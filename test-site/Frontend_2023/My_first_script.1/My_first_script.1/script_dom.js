@@ -51,7 +51,7 @@
 // const text_li = document.querySelectorAll("li.text");
 // for (let i = 0; i < text_li.length; i++){
 // 	text_li[i].innerText = text_li[i].textContent + "!!!!"; 
-// 	/* textContent  сохраняет наш старый текст и дописывает новый.*/
+// !	/* textContent  сохраняет наш старый текст и дописывает новый.*/
 // }
 
 
