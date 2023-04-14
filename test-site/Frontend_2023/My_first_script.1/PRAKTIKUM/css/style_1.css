@@ -1,0 +1,160 @@
+/* Подключаем шрифты. */
+/* @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Bodoni+Moda:ital,opsz@1,6..96&family=Dancing+Script:wght@600&family=EB+Garamond:wght@700&family=Heebo:wght@300&family=Inter:wght@200&family=Lato:ital,wght@0,400;1,300&family=Lobster&family=Open+Sans:ital,wght@1,500&family=Philosopher&family=Playfair+Display+SC&family=Poppins&family=Roboto+Mono&family=Roboto:ital,wght@0,400;1,300&family=Ubuntu&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+
+/*-------------- header start--------------- */
+header {
+	background: #1ADC9C;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 70px;
+}
+.logos {
+	width: 100px;
+}
+img {
+	width: 30px;
+}
+.menu, .social {
+	display: flex;
+	gap: 20px;
+}
+.menu a{
+	font-family: 'Inter';
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 30px;
+	color: #000000;
+}
+/* header end */
+/* ----------------------------------------*/
+/* about start */
+main {
+	background-color: white;
+}
+#about {
+display: flex;
+}
+.about-img img{
+width: 50vw;
+}
+.about-text{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 23px;
+padding: 0 70px;
+font-family: 'Inter';
+font-weight: 400;
+color: #000000;
+}
+.about-text h2 {
+	font-size: 35px;
+	line-height: 42px;
+	
+}
+.about-text p {
+	font-size: 20px;
+	line-height: 24px;
+	text-align: justify;
+}
+/* about and */
+/* -------------------------------- */
+/* our-projects start */
+#our-projects {
+	background: #dcffeb;
+	padding: 124px 64px;
+/* display: flex; */
+}
+#our-projects h2 {
+font-family: 'Inter';
+font-weight: 400;
+font-size: 35px;
+line-height: 42px;
+color: #000000;
+margin-bottom: 50px;
+}
+.images {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+.img img {
+	width: 100%;
+	height: 100%;
+}
+.img {
+	position: relative;
+	width: 400px;
+	height: 370px; 
+}
+.img:hover::before {
+	content: "";
+	background-color: #0000003b;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+/* our-projects end */
+/* ------------------------------- */
+/* footer start */
+#footer {
+	display: flex;
+	flex-direction: column;
+/* align-items: center; */
+justify-content: space-between;
+gap: 20px;
+	padding: 84px 69px 76px;
+	background: white;
+}
+#footer h2 {
+font-family: 'Inter';
+font-weight: 400;
+font-size: 35px;
+line-height: 42px;
+color: #000000;
+margin-bottom: 20px;
+}
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+}
+.contact-block h4 {
+font-family: 'Oswald';
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+color: rgba(153, 153, 153, 1);
+
+/* color: #ff793f; */
+}
+.contact-block p, a {
+font-family: 'Oswald';
+font-weight: 500;
+font-size: 20px;
+line-height: 35px;
+color: #000000;
+}
+.contact-block {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+width: 315px;
+height: 190px;
+}
+.contact-block img {
+	width: 40px;
+	height: 30px;	
+}
+.isred {
+	color: #ff793f;
+}
+
+/* footer end */

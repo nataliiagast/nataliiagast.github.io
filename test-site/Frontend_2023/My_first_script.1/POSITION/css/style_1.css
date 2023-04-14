@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* position: absolute, relative, fixed, sticky */ */
+
+.parent1 {
+	width: 50vw;
+	height: 60vh;
+	background: #f6e58d;
+	position: relative;
+}
+.child1 {
+	width: 100px;
+	height: 100px;
+	background: #dff9fb;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.parent2 {
+	width: 50vw;
+	height: 60vh;
+	background: #ffbe76;
+	position: relative;
+}
+.child2 {
+	width: 90px;
+	height: 90px;
+	background: #7ed6df;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+
+}
+.parent3 {
+	width: 50vw;
+	height: 60vh;
+	background: #f0932b;
+	position: relative;
+}
+.child3 {
+	width: 80px;
+	height: 80px;
+	background: #22a6b3;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.child4 {
+	width: 50%;
+	height: 300px;
+	background: #686de0;
+}
+.dogs {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	background: rgba(214, 23, 23, 0.507);
+	border: 1px solid black;
+	
+}
+.dog1 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background: rebeccapurple;
+	top: 0;
+	left: 0;
+}
+.dog2 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background: #f0932b;
+	top: 0;
+	right: 0;
+}
+.dog3 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background: #22a6b3;
+	bottom: 0;
+	left: 0;
+}
+.dog4 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background: #686de0;
+	bottom: 0;
+	right: 0;
+}
+/* z - index - 1 - 9999 */
+.cat {
+	margin: 0 auto;
+	width: 70vw;
+	height: 70vh;
+	border: 1px solid red;
+	position: relative;
+}
+.cat1 {
+	width: 100px;
+	height: 100px;
+	background: #22a6b3;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	
+
+}
+.cat2 {
+	width: 100px;
+	height: 100px;
+	background: #22b33a;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: 1;
+}
+.cat3 {
+	width: 100px;
+	height: 100px;
+	background: #b34422;
+	position: absolute;
+	top: 90px;
+	left: 90px;
+	z-index: 2;
+}
+.cat4 {
+	width: 100px;
+	height: 100px;
+	background: #2238b3;
+	position: absolute;
+	top: 130px;
+	left: 130px;
+	z-index: 3;
+} */
+
+/* fixed */
+/* .arrow {
+	border: 1px solid black;
+position: fixed;
+bottom: 10px;
+right: 10px;
+}
+.arrow img {
+	width: 100px;
+}
+
+/* sticky */
+/* header {
+	height: 30px;
+	background-color: #7ed6df;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+.menu {
+	width: 70vw;
+	display: flex;
+	justify-content: space-evenly;
+}
+.sticky2 {
+	height: 50px;
+	position: sticky;
+	top: 30px;
+	background-color: #b34422;
+}
+.test {
+	height: 2000px;
+	background-color: #6d6e92;
+}
+/* -------------------------------------------------------------------------------- */
+/* PSEUDOCLASS */
+/* hover */
+/* .test {
+	width: 200px;
+	height: 200px;
+	background-color: aquamarine;
+}
+.test:hover {
+	background-color: beige;
+}
+.text {
+	height: 50vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image {
+	width: 300px;
+	height: 400px;
+	object-fit: cover;
+	transition: all 1s; */
+	/* transition: width 0.5s, heeigth 3s; */
+/* } */
+/* transition  -   определяет с какой плавностью будет осуществляться переход. */
+/* transition-timing-function */
+/* .image:hover { */
+	/* width: 400px;
+	height: 600px;	 */
+	/* transform: scale(1.5); */
+	/* Делаем полный оборот картинки на 360 градусов - (deg). */
+	/* transform: rotate(360deg);
+} */
+/*  transform: scale - При помощи scale мы можем сказать на сколько мы увеличиваем (или уменьшаем 0.5) нашу картинку. При этом не ломая наш макет. Например в 1.5 раза. */
+
+
+/* ------------------------------------------------------------------------- */
+/* PSEUDUELEMENT  - befor, after */
+/* content - important!!!!!!!!!!! */
+/* < > */
+span::before {
+	content: "<";
+	color: blue;
+}
+span::after {
+	content: ">";
+	color: blue;
+}
+
+

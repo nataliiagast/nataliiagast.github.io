@@ -1,0 +1,178 @@
+ /* px Обсолютная фиксированная величина. */
+ /* Формулы конвертации значений из РХ в относительные единицы */
+/* из  РХ в ЕМ - значение в РХ поделить на значение (текущее или унаследованное) */
+/* из РХ в REM - знчение в РХ поделить на значение указанное для тега HTML (если не указано то на 16) */
+/* из РХ в % - значение в РХ поделить на значение относительно которого высчитывается процент и умножить на 100 */
+
+* {
+	margin: o;
+	padding: 0;
+	box-sizing: border-box; /* Подключаем для того что бы сам контент внутри блока сжимался и не выходил за его рамки. Тем самым фиксируем ширину блока.*/
+}
+ /* px */
+/*  %, em, rem, vn, vw */
+
+/* #procent {
+	border: 1px solid red;
+	width: 50%;
+}
+#test-div {
+	width: 70%;
+	border: 1px solid black;
+} */
+
+/*  em /  rem */
+/*  3em  - Это означает в 3 раза больше обычного шрифта. */
+/*  1em = 16px */
+/* em  - Зависит от родительского элементаю */
+/* #div-em {
+	font-size: 20px;
+}
+#p-em {
+	font-size: 2em;
+	padding: 2em 1em;
+} */
+/*  em = 2 * 20 => 40px */
+/*  padding => 2 * 40px => 80px */
+
+/*  rem - root em */
+/*  1rem = 16px */
+/*  rem  -  Зависит от корневого элемента. */
+/* html {
+	font-size: 10px;
+} */
+/*  1rem = 10px */
+/* :root {
+	font-size: 10px;
+}
+#p_rem {
+	font-size: 3rem;
+} */
+/*  3rem = 3 * 10px = 30px  */
+
+
+/*  vh,  vw */
+/*  vh  - 1%  высоты экрана*/
+/*   vw  -  1%  ширины экрана */
+/* #p-view {
+	border: 1px solid blue;
+	width: 50vw;
+	height: 20vh;
+	font-size: 3em;
+}
+.example {
+	width: 50%;  */
+	/* Примерно будем считать 50% => 100px*/
+	/* height: 400px;
+	border: 5px solid black;
+	margin: 20%;  */
+	/* 20px */
+	/* padding: 5px;
+} */
+/* Считаем ширину этого элемента: 20 + 5 + 5 + 100 + 5 + 5 + 20 + 160px */
+/* ------------------------------------------- */
+/*  COLOR  */
+/* rgb(10, 15, 20) - при смешивании цветов получаем новый оттенок. 1-255 Почему именно 255? */
+/* 10 - red, 15 - green, 20 - blue */
+/* rgba */
+/* a - 0 - 1 */
+
+/* #p-rgb {
+	color: rgba(20, 50, 100, 0.5);
+} */
+
+/* HEX */
+/* 0-9, A-F   a0BB56 */
+/* #p-hex {
+	color: #a0bb56; 
+} */
+/* -------------------------------------- */
+div {
+	width: 80%;
+	/* Фиксируем ширину. При увилечении. Ширина будет 80%, но не больше 1200рх. Ты расширяйся, но не будешь больше 1200рх. */
+	max-width: 1200px;
+	/* Фиксируем высоту. При уменьшении. Высота будет не меньше 400рх. */
+	min-height: 400px; 
+	margin: 0 auto;
+}
+
+
+.books-text {
+	text-align: center;
+   font-size: 25px;
+}
+/* Если мы задали размеры родителю 20рх, тогда 1em = 20px.
+ Сделать заголовок 40рх и списки 20рх. Для этого используем em -  параметры родителя. 2 * 20px = 40px => 2em*/
+.books-text h2 {
+	font-size: 2em;
+	color: #686de0;
+	margin-bottom: 1em;
+	/* Значение em - будет умножаться на самого себя. 2em => 50px * 1em = 50px. */
+}
+.books-text ul {
+	list-style-type: none;
+}
+.book-item {
+	font-size: 1em;
+	color: #ff7979;
+}
+.book-img{
+	width: 200px;
+	height: 300px;
+	/* Мы изменяем картинки в соответствии с размерами контейнера.
+ 	 cover -  обрезает картинку по размерам без снижения качества. 
+	 contain - массштабирует картинку. Увеличивая или уменьшая неоьрезая её. */
+	object-fit: cover;
+	border: 1px solid black;
+	border-radius: 15px;
+}
+.store-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid lawngreen;
+	border-radius: 30%;
+	object-fit: cover;
+	
+}
+
+.books-images {
+	text-align: center;
+}
+.books-stores {
+	text-align: center;
+}
+
+.dog-text h1 {
+	font-size: 3em;
+	color: #4834d4;
+	border-bottom: 1em;
+
+}
+.dog-text {
+	text-align: center;
+   font-size: 25px;
+}
+
+.dog-item {
+	list-style-type: none;
+	font-size: 1em;
+	color: #f0932b;
+}
+
+.dog-img {
+	width: 200px;
+	height: 400px;
+	object-fit: cover;
+	border: 1px solid black;
+	margin-bottom: 1em;
+
+}
+.dog-icon {
+	width: 60px;
+	height: 60px;
+	border: 1px solid red;
+	border-radius: 50px;
+
+}
+
+
