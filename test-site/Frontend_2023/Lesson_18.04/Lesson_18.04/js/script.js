@@ -2,6 +2,9 @@
 // function expression
 // arrow function
 
+let x = 10;
+console.log(x);
+
 
 // function decloration //hositing (function dekloration, var)
 hi();
