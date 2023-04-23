@@ -1,0 +1,20 @@
+
+p{
+	color: green;
+	background-color: grey;
+}
+.active {
+	color: orange;
+	background-color: aqua;
+}
+/* .color{
+	color: green;
+	font-weight: 600px;
+	background-color: rgba(128, 128, 128, 0.19);
+}
+.button{
+	border-radius: 25px;
+	background-color: aqua;
+	padding: 10px 25px;
+} */
+
