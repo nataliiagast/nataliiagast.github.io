@@ -1,0 +1,68 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:focus, :active {
+	outline: none;
+}
+a:focus, a:active {
+	outline: none;
+}
+nav,footer,header,aside {
+	display: block;
+}
+html, body {
+	height: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: Montserrat;
+}
+input, button, textarea {
+	font-family: inherit;
+}
+button {
+	cursor: pointer;
+}
+a, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li ol{
+	list-style: none;
+}
+img {
+	vertical-align: top;
+} 
+h1,h2,h3,h4,h5,h6 {
+	font-size: inherit; font-weight: 600;
+} 
+/* ------------------form------------------------ */
+.form{
+	max-width: 700px;
+	width: 100%;
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	padding: 50px;
+}
+.info{
+	display: block;
+	padding: 20px 30px;
+	background-color: rgb(240, 240, 228);
+	border-radius: 5px;
+}
+.text{
+	display: block;
+	margin-left: 34%;
+	font-size: 24px;
+	font-weight: 600;
+	color: rgba(53, 43, 7, 0.653);
+	letter-spacing: 2px;
+}

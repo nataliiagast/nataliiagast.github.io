@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/* /* ,*::before, ::after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+} */
+:focus, :active {
+	outline: none;
+}
+a:focus,a:active {
+	outline: none;
+}
+/* nav,footer,header,aside {
+	display: block;
+} 
+
+ html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+   color: #252b42;
+  font-family: Montserrat;
+}  
+ input, button, textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+padding: 0;
+border: 0;
+}
+a, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}  */
+a, a:visited {
+	text-decoration: none;
+} 
+ul,
+ol,
+li {
+  list-style: none;
+}
+/* img {
+  vertical-align: top;
+} */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #252b42;
+  font-family: Montserrat;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+/* Обьявляем технический контейнер (который содержит общие стили), что бы сделать наш сайт адаптивный. max-width: 1046px; - ограничит наш контейнер. margun: opx auto; - выставит наш контейнер по середине. Добавляя ему отступы безопасности - padding: 0px 15px; - что бы избежать прилепания. Меняем контейнеру - box-izing: content-box; - что бы отступы невходили в размеры. */
+.__container {
+  max-width: 1046px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+/* --------------HEADER  start---------------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+/* header__container  -  это основной контейнер шапки на который действует фиксируемая ширина контента. Фиксируем ему минимальную выоту. */
+.header__container {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+/* Уменьшаем высоту шапки. */
+@media (max-width: 479px) {
+	.header__container {
+		min-height: 50px;
+	}
+}
+/* Ссылкт цвет не наследуют поэтому им нужно указать - color: inherit; - что бы он начал наследовать. */
+.header__logo {
+  font-weight: 700;
+  font-size: 24px;
+  color: inherit;
+}
+
+/* Внешние отступы ставим только для элементов, не для блоков. Потому что они влияют на окружающие стили. */
+.header__menu {
+  margin: 0px 0px 0px 133px;
+}
+/* Регулируем уменьшение отступа, между блоками и элементами,при уменьшении окна. На мобилках max-width: 767px   На планшетах -  max-width: 992px*/
+@media (max-width: 992px) {
+	.header__menu {
+		margin: 0px 0px 0px 80px;
+	 }
+}
+@media (max-width: 767px) {
+	.header__menu {
+		margin: 0px 0px 0px 40px;
+	 }
+}
+@media (max-width: 479px) {
+	.header__menu {
+		margin: 0px 0px 0px 20px;
+	 }
+}
+.menu {
+	padding: 15px 0;
+}
+/* flex-wrap: wrap; - что бы при добавлении пунктов вёрстка не сламалась и пункты складывались. */
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Ставим отступы всем элементам кроме последнего.  */
+.menu__item:not(:last-child) {
+	margin: 0px 21px 0px 0px;
+}
+/* line-height:   - нужно вычислить в процентах, для того что бы он потом адаптировался от увеличения окна. ((24px / 14px) * 100) = 171%  calc(24 / 14 * 100%);*/
+.menu__link {
+  color: #737373;
+  font-weight: 600;
+  line-height: 171%;
+}
+@media (max-width: 479px) {
+	.menu__link {
+		font-size: 18px;
+	}
+}
+/* -----------HEADER end------------------------ */
+/* -------------------- 1:15:09*/
+
+
