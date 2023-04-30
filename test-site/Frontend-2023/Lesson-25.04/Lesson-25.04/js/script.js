@@ -26,9 +26,9 @@ size="5"
 // };
 //-----------------------------------------------------------//
 // form
-const form = document.querySelector('.form');
-const _name = document.querySelector('#name');
-const priceOf = document.querySelector('#price');
+const form = document.querySelector(".form");
+const _name = document.querySelector("#name");
+const priceOf = document.querySelector("#price");
 
 // form2
 const form2 = document.querySelector(".form2");
@@ -46,130 +46,145 @@ noProduct.innerText = "No product!";
 noProduct.style.textAlign = "center";
 section.append(noProduct);
 
-// section sum of products
-const sumBtn = document.querySelector('.sum__button');
-const deleteBtn = document.querySelector('.dlete');
-const section2 = document.querySelector('.total');
+// button sum of products
+const sumBtn = document.querySelector(".sum__button");
+
+// button delete all products
+const delBtn = document.querySelector(".delete");
+
+// section total sum of all products
+const section2 = document.querySelector(".total");
+const div = document.createElement("div");
+const h5 = document.createElement("h4");
+h5.innerText = "Sum of your products is:";
+const h6 = document.createElement("h5");
+div.append(h5, h6);
+div.classList.add("sumOfProducts");
+section2.append(div);
 
 // ----------------------------------------------------------
 
 let products = [];
 form.onsubmit = (e) => {
-	e.preventDefault(); /* Отменяем действие браузера по умолчанию.*/
-	products.push({ title: _name.value, price: priceOf.value });/* каждая карточка передаётся в виде обьекта. Значение - value - берутся из - input - которые писал пользователь.*/
-	_name.value = "";
-	priceOf.value = ""; /* Опустошаем input.*/
-	newProducts();/* Вызывая функцию, отображаем каpточки на странице.*/
+  e.preventDefault(); /* Отменяем действие браузера по умолчанию.*/
+  products.push({
+    title: _name.value,
+    price: priceOf.value,
+  });
+  _name.value = "";
+  priceOf.value = ""; 
+  newProducts();
 };
+// ------------Записываем функцию которая создаёт - div -  с дмя ззаголовками внутри и кнопку.--------------------
 
-/* Записываем функцию. которая как аргумент принимает имя продукта и цену и создаёт - div - с дмя ззаголовками внутри и будет возвращать нам этот - div -. И создаём кнопку.*/
-function createNode(title, price, index) { /*Добавим  - index -  чтобы распознать элемент карточку которую  нужно удалить из массива при нажатии на кнопку */   
-	const div = document.createElement('div');
+function createNode(title, price, index) {
 
-	const h1 = document.createElement('h3');
-	h1.innerText = title;
+  const div = document.createElement("div");
 
-	const h2 = document.createElement('h3');
+  const h1 = document.createElement("h3");
+  h1.innerText = title;
+
+  const h2 = document.createElement("h3");
 	h2.innerText = price;
+	
+  // -------------Добавляем действие удаления карточки. ---------------
+  const btn = closeBtn(); 
+  btn.onclick = () => {
+    section.removeChild(
+      div
+	  );
+	  
+    // -----------Удаляем элемент из массива-------------------------
+    const result = [];
+    for (let i = 0; i < products.length; i++) {
+      if (i !== index) {
+        
+        result.push(products[i]);
+      } 
+    }
+    products = result;
+    newProducts();
+    if (!products.length) {
+      section.append(noProduct);
+    }
+  };
 
-	const btn = closeBtn(); /*Добавляем удаляющую кнопку в карточки.*/
+  div.append(h1, h2, btn); 
+  div.classList.add("productCard");
 
-	/* Добавляем действие  - onclick - на появляющуюся кнопку - btn - для удаления карточки. */
-	btn.onclick = () => {
-		section.removeChild(div); /* Удаляем сам тег карточки при помощи метода - removeChild().*/
+  div.onmouseover = () => {
+    btn.style.opacity = "1";
+  };
 
-		/* Способ удаления элемента из массива.*/
-		/* Можно удалить элемент из массива при помощи метода  - splice - */
-		/*  products.splice(id, 1); */
-		const result = [];
-        for (let i = 0; i < products.length; i++) {
-            if (i !== index) {  /* не равен */
-                result.push(products[i]);
-			  }; /*console.log(result);*/
-        }; 
-        products = result;
-		newProducts();
-		if (!products.length) {
-			section.append(noProduct);
-		}
-	};  //----------------------------------------------------------------------
-
-	div.append(h1, h2, btn); /* Добавляем удаляющую кнопку в карточки.*/
-	div.classList.add('productCard');
-
-	/* Добавляем событие на div карточку при наведении меняем значение - opacity -  будет появляться удаляющая кнопка btn */
-	div.onmouseover = () => {
-		btn.style.opacity = "1";
+  div.onmouseleave = () => {
+    btn.style.opacity = "0";
 	};
-
-	div.onmouseleave = () => {
-		btn.style.opacity = "0";
-	};  // -----------------------------------------------------------------------
-
+	
 	section.append(div);
-	let isBody = document.querySelector('.productCard'); 
+	// -----------------------------------------------------
 
+  // -------- КНОПКА подсчитываем сумму всех товаров---------------------------
+  sumBtn.onclick = () => {
+    allSum();
+  };
+  // --------Удаляем товары из корзины----------------------------------
 
+  delBtn.onclick = () => {
+    const del = [];
+    for (let i = 0; i < products.length; i++) {
+      if (i !== i) {
+        delete products[i];
+      }
+    }
+    products = del;
+
+    newProducts();
+    if (!products.length) {
+      return section.append(noProduct);
+    }
+  };
+  //----------------------------------------------
 };
-
-function summe() {
-	const arr = [];
-	for (let i = 0; i < products.length; i++){
-		if(products[0])
+// ----------------------------------------
+function newProducts() {
+  section.innerHTML = ""; 
+  for (let i = 0; i < products.length; i++) {
+    createNode(products[i].title, products[i].price, i); 
 	}
 }
-
-/* Записываем функцию, которая на основании нашего массива будет содавать наши  - div - карточки*/
-function newProducts() {
-	section.innerHTML = ""; /* Делаем обнуление  - section -  кaждый раз при добавлении чего то  форму т.е при onsubmit. */
-	for (let i = 0; i < products.length; i++){
-		createNode(products[i].title, products[i].price, i); /*Добавим - i - чтобы распознать элемент карточку которую  нужно удалить из массива при нажатии на кнопку */
-	}
-
-};
-
-// Создаём функцию function closeBtn() удаляющей кнопки при помощи которой мы сможем удалять наши карточки.
+// -------------------------------------------------------------
 function closeBtn() {
-	const btn = document.createElement("button");
-	btn.innerText = "X";
-	btn.classList.add("close");
-	return btn;
-}  // ---------------------------------------------------
-
-/* При помощи поиска - Мы берём значение из нашей формы -  input - и оставим только те карточки  - title - которых такие же как и значение  - title - в - input -*/
+  const btn = document.createElement("button");
+  btn.innerText = "X";
+  btn.classList.add("close");
+  return btn;
+} // ---------------------------------------------------
 form2.onsubmit = (e) => {
-	e.preventDefault();
-	section.innerText = "";
-	for (let i = 0; i < products.length; i++) {
-		if (products[i].title === searchInput.value) {
-			createNode(products[i].title, products[i].price, i);
-		}
-	}
+  e.preventDefault();
+  section.innerText = "";
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].title === searchInput.value) {
+      createNode(products[i].title, products[i].price, i);
+    }
+  }
 };
 // ----------------------------------------------------------------
 
-//sort button
-/* Используем метод  - sort -  для сортировки карточек.*/
-/* Этот метод  - sort -  принимает только одну - callback -  функцию. Эта функция называется сравнение.  Эта функция принимает 2 аргумента  a  и  b - Это элементы в нашем массиве. Где - a - это первый елемент и - b - это второй. Они сравниваются между собой и меняются местами (по возрастанию и убыванию), таким образом сравниваются все эдементы массива.
-a.price - b.price  - сравнение при возрастании.  
-b.price - a.price  - сравнение при убывании.*/
+//----------sort button-------------
 
 sortBtn.onclick = () => {
-	products.sort((a, b) => a.price - b.price);
-	newProducts();
+  products.sort((a, b) => a.price - b.price);
+  newProducts();
 };
-// -------------------------------------------------------------------
-
-function totalSum() {
-	const div = document.createElement('div');
-	const h5 = document.createElement('h4');
-	h5.innerText = "Total sum:";
-	const h6 = document.createElement('h4');
-	div.append(h5, h6);
-	div.classList.add('sumOfProducts');
-	section2.append(div);
-
-};
+// -------ФУНКЦИЯ-----Подсчитываем сумму всех товаров---------------------------
+function allSum() {
+  let sumOf = 0;
+  for (let i = 0; i < products.length; i++) {
+    sumOf += +products[i].price;
+  }
+  h6.innerText = `_ ${sumOf}`;
+}
+// ----------------------------------------------------------------
 
 /* 
 Изменить эту функцию так, что бы могли использовать её как и для  - form2.onsubmit -  и для первоночальной её формы - newProducts();
