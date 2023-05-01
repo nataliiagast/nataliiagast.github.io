@@ -109,9 +109,6 @@ input::placeholder{
 	opacity: 0; /* opacity будем менять на значение 1 в скриптах.*/
 	transition: all 1s; /*Время появления кнопки.*/
 }
-.hide {
-	display: none;
- }
 .sumOfProducts{
 	margin: auto;
 	max-width: 700px;

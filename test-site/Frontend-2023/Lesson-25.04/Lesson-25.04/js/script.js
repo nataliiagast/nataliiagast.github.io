@@ -54,23 +54,20 @@ const delBtn = document.querySelector(".delete");
 
 // section total sum of all products
 const section2 = document.querySelector(".total");
-const div = document.createElement("div");
+const divOf = document.createElement("div");
 const h5 = document.createElement("h4");
 h5.innerText = "Sum of your products is:";
 const h6 = document.createElement("h5");
-div.append(h5, h6);
-div.classList.add("sumOfProducts");
-section2.append(div);
+divOf.append(h5, h6);
+divOf.classList.add("sumOfProducts");
+section2.append(divOf);
 
 // ----------------------------------------------------------
 
 let products = [];
 form.onsubmit = (e) => {
   e.preventDefault(); /* Отменяем действие браузера по умолчанию.*/
-  products.push({
-    title: _name.value,
-    price: priceOf.value,
-  });
+  products.push({ title: _name.value, price: priceOf.value, });
   _name.value = "";
   priceOf.value = ""; 
   newProducts();
@@ -132,11 +129,16 @@ function createNode(title, price, index) {
   delBtn.onclick = () => {
     const del = [];
     for (let i = 0; i < products.length; i++) {
-      if (i !== i) {
+      if (i !== index) {
         delete products[i];
       }
     }
-    products = del;
+	  products = del;
+	  
+	  allSum();
+	  if (!products.length) {
+		  divOf.removeChild(h6);
+	  }
 
     newProducts();
     if (!products.length) {
@@ -147,9 +149,9 @@ function createNode(title, price, index) {
 };
 // ----------------------------------------
 function newProducts() {
-  section.innerHTML = ""; 
+	section.innerHTML = ""; 
   for (let i = 0; i < products.length; i++) {
-    createNode(products[i].title, products[i].price, i); 
+	  createNode(products[i].title, products[i].price, i); 
 	}
 }
 // -------------------------------------------------------------
@@ -158,7 +160,8 @@ function closeBtn() {
   btn.innerText = "X";
   btn.classList.add("close");
   return btn;
-} // ---------------------------------------------------
+}
+// ---------------------------------------------------
 form2.onsubmit = (e) => {
   e.preventDefault();
   section.innerText = "";
@@ -181,17 +184,8 @@ function allSum() {
   let sumOf = 0;
   for (let i = 0; i < products.length; i++) {
     sumOf += +products[i].price;
+	} if (products.length) {
+		h6.innerText = `_ ${sumOf}`;
   }
-  h6.innerText = `_ ${sumOf}`;
-}
-// ----------------------------------------------------------------
-
-/* 
-Изменить эту функцию так, что бы могли использовать её как и для  - form2.onsubmit -  и для первоночальной её формы - newProducts();
-function newProducts() {
-	section.innerHTML = "";
-	for (let i = 0; i < products.length; i++){
-		createNode(products[i].title, products[i].price, i); /*Добавим - i - чтобы распознать элемент карточку которую  нужно удалить из массива при нажатии на кнопку 
-	}
 };
-*/
+// ----------------------------------------------------------------

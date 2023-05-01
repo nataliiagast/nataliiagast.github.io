@@ -725,23 +725,34 @@ const delBtn = document.querySelector(".delete");
 
 // section total sum of all products
 const section2 = document.querySelector(".total");
-const div = document.createElement("div");
+const divOf = document.createElement("div");
 const h5 = document.createElement("h4");
 h5.innerText = "Sum of your products is:";
 const h6 = document.createElement("h5");
-div.append(h5, h6);
-div.classList.add("sumOfProducts");
-section2.append(div);
+divOf.append(h5);
+divOf.classList.add("sumOfProducts");
+section2.append(divOf);
+
+// seciton PAY---------------------
+const section3 = document.querySelector(".pay");
+const isDiv = document.createElement('div');
+isDiv.classList.add("pay__div");
+const isText = document.createElement('h4');
+isText.innerText = "Pay now:";
+isDiv.append(isText);
+section3.append(isDiv);
+// create button Pay----------------
+const payBtn = document.createElement("button");
+	payBtn.innerText = "Pay";
+	payBtn.classList.add("pay__button");
+
 
 // ----------------------------------------------------------
 
 let products = [];
 form.onsubmit = (e) => {
   e.preventDefault(); /* Отменяем действие браузера по умолчанию.*/
-  products.push({
-    title: _name.value,
-    price: priceOf.value,
-  }); /* каждая карточка передаётся в виде обьекта. Значение - value - берутся из - input - которые писал пользователь.*/
+  products.push({ title: _name.value, price: priceOf.value, }); /* каждая карточка передаётся в виде обьекта. Значение - value - берутся из - input - которые писал пользователь.*/
   _name.value = "";
   priceOf.value = ""; /* Опустошаем input.*/
   newProducts(); /* Вызывая функцию, отображаем каpточки на странице.*/
@@ -762,9 +773,7 @@ function createNode(title, price, index) {
 
   /* Добавляем действие  - onclick - на появляющуюся кнопку - btn - для удаления карточки. */
   btn.onclick = () => {
-    section.removeChild(
-      div
-    ); /* Удаляем сам тег карточки при помощи метода - removeChild().*/
+    section.removeChild(div); /* Удаляем сам тег карточки при помощи метода - removeChild().*/
     // ---------------короткий способ-------------------------
     /* Способ удаления элемента из массива.*/
     /* Можно удалить элемент из массива при помощи метода  - splice - */
@@ -819,8 +828,8 @@ function createNode(title, price, index) {
   // -----------------------------------------------------
 
   // ------------Кликаем на КНОПКУ вызываем функцию и подсчитываем сумму всех товаров---------------------------
-  sumBtn.onclick = () => {
-    allSum();
+	sumBtn.onclick = () => {
+	  allSum();
   };
   // --------Удаляем товары из корзины----------------------------------
 
@@ -832,7 +841,15 @@ function createNode(title, price, index) {
       }
     }
     products = del;
-
+	//  payButton();
+	//  if (!products.length) {
+	// 	 section3.remove('button');
+	//  }
+    allSum();
+    if (!products.length) {
+		 divOf.removeChild(h6);
+		 isDiv.removeChild(payBtn);
+	  }
     newProducts();
     if (!products.length) {
       return section.append(noProduct);
@@ -844,8 +861,9 @@ function createNode(title, price, index) {
 /* Записываем функцию, которая на основании нашего массива будет содавать наши  - div - карточки*/
 function newProducts() {
   section.innerHTML = ""; /* Делаем обнуление  - section -  кaждый раз при добавлении чего то  форму т.е при onsubmit. */
-  for (let i = 0; i < products.length; i++) {
-    createNode(products[i].title, products[i].price,i); /*Добавим - i - чтобы распознать элемент карточку которую  нужно удалить из массива при нажатии на кнопку */
+	for (let i = 0; i < products.length; i++) {
+	   /*Добавим - i - чтобы распознать элемент карточку которую  нужно удалить из массива при нажатии на кнопку */
+    createNode( products[i].title, products[i].price, i );
   }
 }
 // -------------------------------------------------------------
@@ -885,9 +903,19 @@ function allSum() {
   let sumOf = 0;
   for (let i = 0; i < products.length; i++) {
     sumOf += +products[i].price;
-  }
-  h6.innerText = `_ ${sumOf}`;
-}
+	} if (products.length) {
+		divOf.append(h6);
+	h6.innerText = `_ ${sumOf}`;
+	 isDiv.append(payBtn);
+	}
+};
+// function payButton() {
+//   const payBtn = document.createElement("button");
+//   payBtn.innerText = "Pay";
+//   payBtn.classList.add("pay");
+// 	isDiv.append(payBtn);
+// 	return payBtn;
+// }
 // ----------------------------------------------------------------
 
 /* 
