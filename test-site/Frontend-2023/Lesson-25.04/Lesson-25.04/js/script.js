@@ -75,7 +75,7 @@ form.onsubmit = (e) => {
 // ------------Записываем функцию которая создаёт - div -  с дмя ззаголовками внутри и кнопку.--------------------
 
 function createNode(title, price, index) {
-
+	
   const div = document.createElement("div");
 
   const h1 = document.createElement("h3");
@@ -137,7 +137,7 @@ function createNode(title, price, index) {
 	  
 	  allSum();
 	  if (!products.length) {
-		  divOf.removeChild(h6);
+		  h6.innerText = "";
 	  }
 
     newProducts();
@@ -150,10 +150,16 @@ function createNode(title, price, index) {
 // ----------------------------------------
 function newProducts() {
 	section.innerHTML = ""; 
-  for (let i = 0; i < products.length; i++) {
-	  createNode(products[i].title, products[i].price, i); 
-	}
-}
+	for (let i = 0; i < products.length; i++) {
+		// const { title, price } = products[i];
+		const create = createNode(products[i].title, products[i].price, i);
+		if (products.length) {
+			create;
+		} if (products[i].price === searchInput.value) {
+			form2.onsubmit = () => create;
+		} 
+	};
+};
 // -------------------------------------------------------------
 function closeBtn() {
   const btn = document.createElement("button");
@@ -165,11 +171,6 @@ function closeBtn() {
 form2.onsubmit = (e) => {
   e.preventDefault();
   section.innerText = "";
-  for (let i = 0; i < products.length; i++) {
-    if (products[i].title === searchInput.value) {
-      createNode(products[i].title, products[i].price, i);
-    }
-  }
 };
 // ----------------------------------------------------------------
 
@@ -182,7 +183,7 @@ sortBtn.onclick = () => {
 // -------ФУНКЦИЯ-----Подсчитываем сумму всех товаров---------------------------
 function allSum() {
   let sumOf = 0;
-  for (let i = 0; i < products.length; i++) {
+	for (let i = 0; i < products.length; i++) {
     sumOf += +products[i].price;
 	} if (products.length) {
 		h6.innerText = `_ ${sumOf}`;
