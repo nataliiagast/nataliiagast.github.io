@@ -1,20 +1,47 @@
 
-p{
-	color: green;
-	background-color: grey;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-.active {
-	color: orange;
-	background-color: aqua;
+body {
+	font-family: sana-serif;
+	font-size: 40px;
+	width: 100%;
+	min-height: 100vh;
 }
-/* .color{
-	color: green;
-	font-weight: 600px;
-	background-color: rgba(128, 128, 128, 0.19);
+[class^="box-"] {
+	background-color: skyblue;
+	display: grid;
+	place-items: end;
 }
-.button{
-	border-radius: 25px;
-	background-color: aqua;
-	padding: 10px 25px;
-} */
+.container{
+	display: grid;
+	gap: 20px;
+	height: 100vh;
+	grid-template-columns: 1fr, 1fr;
+	grid-template-rows: 1fr, 1fr;
+	/* grid-template-areas: 
+	"A A A A  A A A A  A A A A"
+	"B B B B  B B B B  B B C C"
+	"B B B B  B B B B  B B C C"; */
+	/* justify-items: end;
+	align-items: center; */
+	/* justify-content: center; */
+	/* align-content: center; */
+}
 
+.box-1 {
+	/* grid-row: span 10; */
+	grid-area: A;
+	/* align-self: stretch; */
+}
+/* .box-2 {
+	grid-area: B;
+}
+.box-3 {
+	grid-area: C;
+}
+.box-4{
+
+} */
