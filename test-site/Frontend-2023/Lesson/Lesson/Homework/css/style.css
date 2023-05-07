@@ -55,22 +55,3 @@ img {
 h1,h2,h3,h4,h5,h6 {
 	font-size: inherit; font-weight: 400;
 } */
-.form {
-	max-width: 700px;
-	width: 100%;
-	margin: 50px auto;
-
-}
-
-/* .text-output{
-
-	font-size: 24px;
-	color: black;
-
-}
-
-.text-input{
-	height: 20px;
-	padding: 5px;
-	border-radius: 5px;
-} */
