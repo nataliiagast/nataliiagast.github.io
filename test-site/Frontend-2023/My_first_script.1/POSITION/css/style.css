@@ -128,7 +128,7 @@ body {
 	gap: 24px;
 }
 
-.example__item {
+/* .example__item { */
 	/*
   padding: 0px 12px;
   // Получаем размер в %
@@ -139,7 +139,7 @@ body {
   // на 16 (размер шрифта по умолчанию)
   min-width: 18.125rem;
   */
-}
+/* } */
 
 /* Карточка */
 .item-example {

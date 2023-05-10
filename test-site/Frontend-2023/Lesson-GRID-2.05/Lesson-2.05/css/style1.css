@@ -3,7 +3,7 @@
 	margin: 0;
 	border: 0;
 }
-/* /*,*::before, ::after {
+*,*::before, ::after {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -54,13 +54,67 @@ img {
 }
 h1,h2,h3,h4,h5,h6 {
 	font-size: inherit; font-weight: 400;
-} */
-
-
-.grid {
-	display: grid;
 }
-/* .left {
+
+/*---------------  Расширение боковой панели.------------- */
+/* .grid {
+	height: 100vh;
+	display: grid; */
+	/* grid-template-columns: 48px auto;  или */
+	/* transition: 300ms;
+	grid-template-columns: var(--left, 48px) auto;
+}
+.grid:has(.left:hover){ */
+/* grid-template-columns: 30% auto; или */
+/* --left: 30%;
+}
+.left {
+background-color: rgba(68, 166, 180, 0.593);
 }
 .right {
+	background: rgba(223, 192, 123, 0.588);
+	border: 3rem solid rgba(235, 196, 125, 0.714);
 } */
+
+/*--------------- Расширяющиеся панели.-------------- */
+/* #grid{
+	height: 100vh;
+	transition: 500ms;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3px;
+	background: crimson;
+}
+:where(.left, .center, .right){
+	background: bisque;
+	transition: 300ms;
+}
+:where(.left, .center, .right):hover{
+	background: crimson;
+}
+#grid:has(.left:hover){
+	grid-template-columns: 2fr 0.5fr 0.5fr;
+}
+#grid:has(.center:hover){
+	grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+#grid:has(.right:hover){
+	grid-template-columns: 0.5fr 0.5fr 2fr;
+} */
+
+/* Добавление столбцов рядов  */
+body{
+	background: burlywood;
+}
+#grid{
+	height: 100vh;
+	transition: 300ms;
+	display: grid;
+	grid-template-columns: 1fr 1fr 0fr;
+}
+#grid:hover{
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.column{
+	outline: 1.5px solid rgb(0 0 0 / 10%)
+}
