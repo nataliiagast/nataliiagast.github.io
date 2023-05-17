@@ -1,4 +1,4 @@
-* {
+/*/ * {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -54,4 +54,64 @@ img {
 }
 h1,h2,h3,h4,h5,h6 {
 	font-size: inherit; font-weight: 400;
+} */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Montserrat';
+}
+.container {
+	max-width: 1171px;
+	margin: 0 auto;
+}
+
+/* ------------header start------------ */
+.header {
+	display: grid;
+	height: 102px;
+	background-color: #202020;
+}
+.header__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: center;
+	align-content: center;
+}
+
+.header__logo {
+/* display: flex; */
+
+}
+.logo {
+	display: inline-block;
+	/* align-content: flex-start; */
+}
+.header__nav {
+	/* display: grid;
+	grid-template-columns: repeat(6, 1fr); */
+
+}
+.header__list {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 42px;
+}
+.list__item {
+	list-style: none;
+	
+}
+.list__item a {
+	text-decoration: none;
+}
+.link {
+}
+.header__button {
+}
+.black {
+}
+.button__orange {
 }
