@@ -316,7 +316,9 @@
 // console.log(string);
 
 // --------------------------------------------
-// Напишите функцию sortStrings, которая принимает в качестве аргумента массив строк и возвращает новый массив со строками, отсортированными в алфавитном порядке.
+// Напишите функцию sortStrings, которая принимает в качестве аргумента массив строк
+//  и возвращает новый массив со строками,
+// 	отсортированными в алфавитном порядке.
 
 // const sortStrings = function (array) {
 // 	const result = [];
@@ -581,10 +583,10 @@
 // // (4) [3, 4, 5, 100]
 
 // -------------alternative---reduce, concat------------
-const arr = [1, 2, 3, , 4, [5, 6]];
-const array = arr.reduce((acc, val) => acc.concat(val), []);
-// const array = arr.flat(Infinity);
-console.log(array);
+// const arr = [1, 2, 3, , 4, [5, 6]];
+// const array = arr.reduce((acc, val) => acc.concat(val), []);
+// // const array = arr.flat(Infinity);
+// console.log(array);
 
 // const arr = [1, 2, 3, , 4, [5, 6, [1, 2, 3]]];
 // function isFlat(arr, d = 1) {
@@ -594,6 +596,19 @@ console.log(array);
 // isFlat(arr, Infinity);
 // ---------------------------------
 
+
+
+
+// ----------------reduceRight------------------
+// const a = [[1, 2], [3, 4], [5, 6, 7, 8], [54, 32]];
+// const b = a.reduceRight((a, b) => {
+// 	return a.concat(b);
+// }, []);
+// console.log(b);
+
+// const z = [1, 4, 6, 8, 56, 90];
+// const x = z.reduceRight((a, b) => { return a + b });
+// console.log(x);
 
 
 
@@ -838,4 +853,71 @@ console.log(array);
 // let b = string.join(' ');
 
 // console.log(b);
+// -------------------------------------------
+
+
+
+// -------------at-------------------
+// const a = [2, 4, 5, 6, 8, 90, -65];
+// // a.at(-1); a.at(0); a.at(5);
+// const b = a.at(3);
+// console.log(b);
+// // ------------------------------
+// const x = ['hello', 'my', 'friend'];
+
+// function retLast(array) {
+// 	return array.at(-1);
+// };
+// console.log(retLast(x));
+// ----------------------------------------
+
+
+
+
+
+// --------------copyWithin-------------------
+// const a = [1, 2, 3, 4, 5, 6, 8, 9];
+// const b = a.copyWithin(0, 4, 6);
+// // Скопирует  элементы - 5, 6 -
+// // и поставит их на позицию - 0 - вместо элементов - 1, 2 -
+// // получаем - (8) [5, 6, 3, 4, 5, 6, 8, 9]
+// // a.copyWithin(0, 4)
+// // Скопирует  элементы - 5, 6, 8, 9 -
+// // и поставит их на позицию - 0 -
+// // вместо элементов - 1, 2, 3, 4 -
+// // получаем  - (8) [5, 6, 8, 9, 5, 6, 8, 9]
+// console.log(b);
+// ----------------------------------
+
+
+
+
+
+
+// --------------entries--------------------
+// const a = ['a', 'b', 'd', 's', 'r'];
+// const b = a.entries();
+// console.log(b.next().value);
+// console.log(b.next().value);
+// console.log(b.next().value);
+// console.log(b.next().value);
+// console.log(b.next().value);
+// Получаем: [0, 'a'] [1, 'b'] [2, 'd'] [3, 's'] [4, 'r']
+// -----------------------------------------
+
+
+
+
+// -----------values-------------------
+// const c = a.values();
+// console.log(c.next().value);
+// console.log(c.next().value);
+// console.log(c.next().value);
+// console.log(c.next().value);
+// console.log(c.next().value);
+// Получаем: a  b  d  s  r
+// -----------------------------
+
+
+
 
