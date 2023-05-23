@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+    <style>
+      .light-mode {
+        background-color: antiquewhite;
+        color: black;
+      }
+      .dark-mode {
+        background-color: black;
+        color: antiquewhite;
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.css">
-	<title>Document</title>
-</head>
+  <body class="light-mode">
+    <header>
 
-<body>
+      <div>
+        <button id="toggle">Swith theme</button>
+      </div>
+      <div class="menu">
+        <p class="menu-item">Home</p>
+        <p class="menu-item">Blog</p>
+        <p class="menu-item">About</p>
+        <p class="menu-item">Contacts</p>
+      </div>
+    </header>
+    <section>
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+        aspernatur sint saepe delectus, eos aliquam voluptates laudantium quasi?
+        Iure praesentium accusantium eaque laudantium id nobis!
+      </p>
+    </section>
+	 <div class="button">
+		<button class="plus">+</button>
+		<button class="minus">-</button>
+		<p class="num"></p>
+	 </div>
 
+    <!-- <form>
+      <input id="textInput" type="text" />
+    </form>
+    <button id="toggle">Click me!</button>
+    <button id="for">Загрузить</button>
+    <button id="del">Очистить</button> -->
 
-	<script src="./js/script.js"></script>
-</body>
-
+    <script src="./js/script.js"></script>
+  </body>
 </html>
