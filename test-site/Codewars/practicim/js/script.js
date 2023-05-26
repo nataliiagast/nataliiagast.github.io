@@ -229,25 +229,18 @@ isNum(8);
 // 	которая удаляет все восклицательные знаки из заданной строки.
 const abcd = "Каждый, охотник, желает! знать! где сидит фазан!.";
 const s = "!";
-const g = ",";
-function removeExclamationMarks(s, g) {
+function removeExclamationMarks(s) {
 	const newStr = abcd.split('');
-	const star = newStr.filter(elem => {
-		if (elem !== s && elem !== g) {
-			return true;
-		} else {
-			return false;
-		}
-	});
+	const star = newStr.filter(elem => elem !== s);
 	console.log(star.join(""));	
 }
-removeExclamationMarks(s, g);
+removeExclamationMarks(s);
 
-// Завершите метод,
-// 	который принимает булево значение
-// 	и возвращает строку "Yes" для true
-// 	или строку "No" для false.
-
-function boolToWord( bool ){
-
- }
+// Учитывая массив целых чисел,
+// 	верните новый массив с каждым удвоенным значением.
+const ar = [1, 3, 6, 8];
+function maps(array){
+	const arr = array.map(elem => elem * 2);
+	console.log(arr);
+}
+maps(ar);
